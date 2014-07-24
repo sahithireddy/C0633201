@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:id="@+id/homeheader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Back"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/savebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:text="Save"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Add Notes"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeheader"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/titleEdittext"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:ellipsize="end"
+            android:hint="Enter Title here"
+            android:singleLine="true" />
+
+        <Spinner
+            android:id="@+id/categoryspinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleEdittext" />
+
+        <EditText
+            android:id="@+id/notesEdittext"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/categoryspinner"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="top|left"
+            android:hint="Enter Notes here"
+            android:maxHeight="150dp"
+            android:minHeight="100dp"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/imagelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/titlelayout"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/imagetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:minEms="7"
+            android:text="Add Images:"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/imagetextview"
+            android:src="@drawable/photo2" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/img1"
+            android:src="@drawable/photo" />
+    </RelativeLayout>
+
+    <!-- <RelativeLayout
+        android:id="@+id/videolayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/imagelayout" >
+
+        <TextView
+            android:id="@+id/videotextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:minEms="7"
+            android:text="Add Video:"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/videoimg"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/videotextview"
+            android:src="@drawable/video" />
+    </RelativeLayout> -->
+
+    <RelativeLayout
+        android:id="@+id/recordinglayout"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/imagelayout" >
+
+        <TextView
+            android:id="@+id/recordingtextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:minEms="7"
+            android:text="Add Recording:"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/recordingimg"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/recordingtextview"
+            android:src="@drawable/recording" />
+    </RelativeLayout>
+
+</RelativeLayout>
